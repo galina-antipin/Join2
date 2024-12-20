@@ -1,0 +1,733 @@
+.summary-maincontainer {
+    height: 100%;
+    width: calc(100% - 232px);
+    margin-left: 232px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-main);
+    max-width: 1688px;
+    margin-right: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.summary-maincontainer::-webkit-scrollbar {
+    display: none;
+}
+
+.summary-container {
+    margin-top: 128px;
+    margin-left: 96px;
+    margin-right: 32px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 128px;
+}
+
+.summary-header {
+    width: 625px;
+    display: flex;
+    gap: 44px;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+h1 {
+    font-size: 61px;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-size: 27px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.separator-summary-header {
+    height: 59px;
+    width: 1px;
+    border: solid 2px var(--brand-blue);
+    background-color: var(--brand-blue);
+    border-radius: 8px;
+}
+
+.separator-summary-header2 {
+    display: none;
+    width: 90px;
+    height: 4px;
+    background-color: var(--brand-blue);
+}
+
+.summary-board {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.summary-elements {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+}
+
+.su-board-top {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    height: 168px;
+}
+
+.su-done-to-do {
+    width: 100%;
+    padding: 28px 48px 28px 48px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    transition: transform 0.3s ease;
+}
+
+.su-pen {
+    background-color: var(--brand-dark);
+    border-radius: 100%;
+    width: 69px;
+    height: 69px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.su-pen svg {
+    width: 25px;
+    height: 25px;
+}
+
+.su-pen svg path {
+    fill: white;
+}
+
+.su-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.su-count div {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.su-count span {
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 8px;
+    color: var(--brand-dark);
+}
+
+.su-checkmark {
+    background-color: var(--brand-dark);
+    border-radius: 100%;
+    width: 69px;
+    height: 69px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.su-checkmark svg {
+    width: 30px;
+    height: 22px;
+}
+
+.su-checkmark svg path {
+    stroke: white;
+}
+
+.su-done-to-do:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    background-color: var(--brand-dark);
+    color: white;
+    cursor: pointer;
+}
+
+.su-done-to-do:hover .su-checkmark {
+    background-color: white;
+}
+
+.su-done-to-do:hover .su-checkmark svg path {
+    stroke: var(--brand-dark);
+}
+
+.su-done-to-do:hover .su-pen {
+    background-color: white;
+}
+
+.su-done-to-do:hover .su-pen svg path {
+    fill: var(--brand-dark);
+}
+
+.su-done-to-do:hover .su-count svg path {
+    stroke: var(--brand-dark);
+}
+
+.su-done-to-do:hover .su-count span {
+    color: white;
+}
+
+.su-urgent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 168px;
+    margin-top: 28px;
+    transition: transform 0.3s ease;
+}
+
+.su-urgent-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 61px;
+    padding: 28px 48px 28px 48px;
+}
+
+.su-urgent-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.urgency-marker {
+    background-color: #FF3D00;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.urgency-marker svg {
+    width: 34px;
+    height: 25px;
+}
+
+.urgency-marker svg path {
+    fill: white;
+}
+
+.separator-urgency {
+    height: 102px;
+    width: 3px;
+    background-color: #D1D1D1;
+    border-radius: 8px;
+}
+
+.su-urgent:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    background-color: var(--brand-dark);
+    color: white;
+    cursor: pointer;
+}
+
+.su-urgent:hover .urgency-marker {
+    background-color: white;
+}
+
+.su-urgent:hover .urgency-marker svg path {
+    fill: var(--brand-dark);
+}
+
+.su-urgent:hover .su-urgent-content .su-urgent-left .su-count span {
+    color: white;
+}
+
+.su-urgent:hover .deadline span {
+    color: white;
+}
+
+.deadline {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.deadline div {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.deadline span {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--brand-dark);
+}
+
+.su-tasks {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-top: 29px;
+}
+
+.su-task-areas {
+    width: 100%;
+    height: 168px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 25px 0px 25px;
+    transition: transform 0.3s ease;
+}
+
+.su-task-areas div {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.su-task-areas span {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    color: var(--brand-dark);
+}
+
+.su-task-areas:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    background-color: var(--brand-dark);
+    color: white;
+    cursor: pointer;
+}
+
+.su-task-areas:hover span {
+    color: white;
+}
+
+.summary-greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+.summary-greeting div {
+    font-size: 47px;
+    font-weight: 500;
+    color: var(--brand-dark);
+}
+
+.summary-greeting span {
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--brand-blue);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 1600px) {
+    .summary-container {
+        margin-top: 128px;
+        margin-left: 80px;
+    }
+
+    .summary-header {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 1471px) {
+    .summary-greeting {
+        width: 320px;
+    }
+}
+
+@media (max-width: 1279px) {
+
+    .summary-greeting div {
+        font-size: 28px;
+    }
+
+    .summary-greeting span {
+        font-size: 45px;
+    }
+
+    .summary-container {
+        margin-top: 160px;
+        margin-left: 80px;
+    }
+
+    .summary-board {
+        gap: 60px;
+    }
+
+    .summary-header {
+        margin-bottom: 56px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .summary-maincontainer {
+        height: 100%;
+        width: auto;
+        margin-left: 64px;
+        margin-right: 64px;
+        align-items: center;
+    }
+
+    .summary-container {
+        margin-left: 0px;
+        margin-right: 0;
+    }
+
+    .summary-header {
+        width: 100%;
+    }
+
+    .summary-greeting {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(246, 247, 248, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        animation: fadeInOut 3s ease;
+        width: 100vw;
+        pointer-events: none;
+    }
+    
+    @keyframes fadeInOut {
+        0% {
+            opacity: 1; 
+        }
+        50% {
+            opacity: 1; 
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+
+    .summary-maincontainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .summary-container {
+        margin-top: 128px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 100px;
+    }
+
+    .summary-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        gap: 0;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 47px;
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 20px;
+    }
+
+    .separator-summary-header {
+        display: none;
+    }
+
+    .separator-summary-header2 {
+        display: block;
+    }
+
+    .summary-elements {
+        width: 396px;
+    }
+
+    .su-board-top {
+        height: 110px;
+        gap: 24px;
+    }
+
+    .su-done-to-do {
+        padding: 38px 19px 38px 19px;
+        gap: 10px;
+    }
+
+    .su-pen {
+        width: 40px;
+        height: 40px;
+    }
+
+    .su-pen svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .su-count div {
+        font-size: 47px;
+    }
+
+    .su-count span {
+        font-size: 14px;
+    }
+
+    .su-checkmark {
+        width: 40px;
+        height: 40px;
+    }
+
+    .su-checkmark svg {
+        width: 17px;
+        height: 13px;
+    }
+
+    .su-urgent {
+        height: 110px;
+        margin-top: 30px;
+    }
+
+    .su-urgent-content {
+        gap: 20px;
+        padding: 28px 0px 28px 0px;
+    }
+
+    .urgency-marker {
+        width: 40px;
+        height: 40px;
+    }
+
+    .urgency-marker svg {
+        width: 23px;
+        height: 17px;
+    }
+
+    .separator-urgency {
+        height: 68px;
+        width: 3px;
+    }
+
+    .deadline {
+        gap: 8px;
+    }
+
+    .deadline div {
+        font-size: 16px;
+    }
+
+    .deadline span {
+        font-size: 14px;
+    }
+
+    .su-tasks {
+        gap: 24px;
+        margin-top: 30px;
+    }
+
+    .su-task-areas {
+        height: 116px;
+    }
+
+    .su-task-areas div {
+        font-size: 47px;
+    }
+
+    .su-task-areas span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .su-tasks {
+        margin-top: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .summary-elements {
+        width: 340px;
+    }
+
+    .summary-header {
+        margin-bottom: 32px;
+    }
+
+    .su-board-top {
+        height: 100px;
+        gap: 16px;
+    }
+
+    .su-pen {
+        width: 36px;
+        height: 36px;
+    }
+
+    .su-pen svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .su-count div {
+        font-size: 40px;
+    }
+
+    .su-count span {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .su-checkmark {
+        width: 36px;
+        height: 36px;
+    }
+
+    .su-checkmark svg {
+        width: 14px;
+        height: 10px;
+    }
+
+    .su-urgent {
+        height: 100px;
+        margin-top: 18px;
+    }
+
+    .su-urgent-content {
+        padding: 0;
+    }
+
+    .urgency-marker {
+        width: 36px;
+        height: 36px;
+    }
+
+    .urgency-marker svg {
+        width: 19px;
+        height: 13px;
+    }
+
+    .separator-urgency {
+        height: 60px;
+    }
+
+    .deadline {
+        gap: 4px;
+    }
+
+    .deadline div {
+        font-size: 14px;
+    }
+
+    .deadline span {
+        font-size: 12px;
+    }
+
+    .su-tasks {
+        gap: 16px;
+    }
+
+    .su-task-areas {
+        width: 100%;
+    }
+
+    .su-task-areas div {
+        font-size: 40px;
+    }
+
+    .su-task-areas span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .su-board-top {
+        gap: 8px;
+    }
+
+    .su-tasks {
+        gap: 8px;
+    }
+
+    .summary-container {
+        margin-top: 104px;
+    }
+
+    .summary-header {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 370px) {
+    .summary-elements {
+        width: 300px;
+    }
+
+    .summary-container {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .su-count div {
+        font-size: 36px;
+    }
+
+    .su-task-areas {
+        width: 100%;
+        padding: 0px 16px 0px 16px;
+    }
+
+    .su-task-areas div {
+        font-size: 36px;
+    }
+
+    .su-task-areas span {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,378 @@
+@media (max-width: 1600px) {
+  .background-animation {
+    background-color: #f6f7f8;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    animation: backgroundanim 3s ease 1s 1 none forwards;
+  }
+  .login-container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @keyframes backgroundanim {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1);
+      z-index: -1;
+    }
+  }
+  .log-joinlogo {
+    position: absolute;
+    height: 78px;
+    width: 64px;
+    z-index: 10;
+    animation: moveLogo 1s linear forwards;
+  }
+
+  @keyframes moveLogo {
+    0% {
+      height: 300px;
+      width: 284px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    40% {
+      height: 300px;
+      width: 284px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      top: 50px;
+      left: 47px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .log-siteinfo {
+    margin-top: 50px !important;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    margin: 0px 0px !important;
+  }
+
+  .background-animation {
+    background-color: #2a3647;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    animation: backgroundanimresponsive 1s ease 200ms 1 normal forwards;
+  }
+  @keyframes backgroundanimresponsive {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 10;
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1);
+      z-index: -1;
+    }
+  }
+  .log-joinlogo {
+    position: absolute;
+    top: 80px;
+    height: 78px;
+    width: 64px;
+    z-index: 10;
+    animation: moveLogoresponsive 1s linear 200ms 1 normal forwards;
+  }
+
+  @keyframes fillAnimation {
+    0% {
+      fill: white;
+    }
+    100% {
+      fill: #2a3647;
+    }
+  }
+
+  .log-joinlogo path {
+    animation: fillAnimation 1s linear 200ms 1 normal forwards;
+  }
+
+  .log-joinlogo path[fill="#29ABE2"] {
+    animation: none;
+  }
+
+  @keyframes moveLogoresponsive {
+    0% {
+      height: 300px;
+      width: 284px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      top: 37px;
+      left: 38px;
+    }
+  }
+  .login-headline-container h1 {
+    font-size: 47px !important;
+    margin-top: 0px !important;
+  }
+  .login-separator {
+    width: 120px;
+  }
+  .loginsitecontainers {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .login-container {
+    margin-top: 165px !important;
+  }
+  .log-head {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-top: 50px;
+  }
+  .log-footer {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .log-siteinfo {
+    margin-top: 25px;
+  }
+
+  .su-button {
+    font-size: 16px !important;
+  }
+  .log-maincontainer {
+    margin-top: 0px !important;
+  }
+  .log-head-elements {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 700px) {
+  .login-container {
+    width: 93%;
+    margin-top: 165px !important;
+  }
+
+  .login-input-container {
+    width: 90%;
+  }
+
+  .background-animation {
+    background-color: #2a3647;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    animation: backgroundanimresponsive 1s ease 200ms 1 normal forwards;
+  }
+  @keyframes backgroundanimresponsive {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 10;
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1);
+      z-index: -1;
+    }
+  }
+  .log-joinlogo {
+    position: absolute;
+    top: 80px;
+    height: 78px;
+    width: 64px;
+    z-index: 10;
+    animation: moveLogoresponsive 1s linear 200ms 1 normal forwards;
+  }
+
+  @keyframes fillAnimation {
+    0% {
+      fill: white;
+    }
+    100% {
+      fill: #2a3647;
+    }
+  }
+
+  .log-joinlogo path {
+    animation: fillAnimation 1s linear 200ms 1 normal forwards;
+  }
+
+  .log-joinlogo path[fill="#29ABE2"] {
+    animation: none;
+  }
+
+  @keyframes moveLogoresponsive {
+    0% {
+      height: 300px;
+      width: 284px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    100% {
+      top: 50px;
+      left: 47px;
+    }
+  }
+  .login-headline-container h1 {
+    font-size: 47px !important;
+    margin-top: 0px !important;
+  }
+  .login-separator {
+    width: 120px;
+  }
+  .loginsitecontainers {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .log-head {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-top: 50px;
+  }
+  .log-footer {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .log-siteinfo {
+    margin-top: 25px;
+  }
+
+  .su-button {
+    font-size: 16px !important;
+  }
+  .log-maincontainer {
+    margin-top: 0px !important;
+  }
+  .log-head-elements {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    margin: 0px 0px !important;
+  }
+  .login-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .su-button {
+    width: 60%;
+  }
+
+  .log-siteinfo {
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-height: 815px) and (max-width: 700px) {
+  .background-animation {
+    background-color: #2a3647;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    height: 100vh;
+    z-index: 10;
+    animation: backgroundanimresponsive 2s linear 300ms 1 normal forwards;
+  }
+
+  @keyframes backgroundanimresponsive {
+    0% {
+      opacity: 1;
+      z-index: 10;
+    }
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  .log-joinlogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 160px;
+    width: 146px;
+    z-index: 10;
+    animation: moveLogoresponsive 2s linear 300ms 1 normal forwards;
+  }
+
+  @keyframes moveLogoresponsive {
+    0% {
+      height: 160px;
+      width: 146px;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    100% {
+      height: 160px;
+      width: 146px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  .log-joinlogo path {
+    fill: white;
+    animation: none;
+  }
+
+  .log-joinlogo path[fill="#29ABE2"] {
+    fill: #29abe2;
+    animation: none;
+  }
+
+  .login-container {
+    margin-top: 16px !important;
+  }
+}
+
+@media (max-width: 427px) {
+  .log-head {
+    height: 70px;
+  }
+
+  .login-headline-container h1 {
+    font-size: 40px !important;
+  }
+
+  .inputfield-basic-design {
+    padding: 10px;
+  }
+}

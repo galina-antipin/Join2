@@ -1,0 +1,139 @@
+@media (min-width: 1920px) {
+  .addtask-maincontainer {
+    height: 100%;
+    max-width: 1560px;
+    width: calc(100% - 232px);
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1250px) {
+  :root {
+    --outer-margin: 40px;
+  }
+}
+
+@media (max-width: 1160px) {
+  :root {
+    --outer-margin: 28px;
+  }
+
+  .urgency-button {
+    font-size: 18px;
+  }
+
+  .outer {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .addtask-maincontainer {
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --outer-margin: 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .at-body-emptydiv {
+    display: none;
+  }
+
+  .at-body-maincontainer {
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-left: var(--outer-margin);
+    margin-right: var(--outer-margin);
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .at-footer-maincontainer {
+    height: auto;
+    margin-bottom: 120px;
+  }
+
+  .subtasks-field {
+    margin-bottom: 80px;
+  }
+
+  .responsive-clear-button {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .at-footer-maincontainer {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .at-footer-requiredtext {
+    height: auto;
+    width: calc(100% - var(--outer-margin));
+    position: static;
+    margin-bottom: 20px;
+    margin-left: var(--outer-margin);
+  }
+
+  .at-footer-buttoncontainer {
+    margin-right: var(--outer-margin);
+    width: calc(100% - var(--outer-margin));
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .at-footer-requiredtext {
+    font-size: 14px;
+  }
+
+  :root {
+    --outer-margin: 8px;
+  }
+
+  .urgency-button {
+    font-size: 16px;
+  }
+
+  .outer {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 385px) {
+  .responsive-submit-button {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 354px) {
+
+  .at-footer-maincontainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .at-footer-requiredtext {
+    display: flex;
+    justify-content: center;
+  }
+
+  .at-footer-buttoncontainer {
+    margin-right: var(--outer-margin);
+    width: calc(100% - var(--outer-margin));
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+}

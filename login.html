@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join - Log in</title>
+    <link rel="icon" type="image/png" href="./img/join-logo-blue.png" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="login-responsive.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="data.js"></script>
+    <script src="apiscripts.js"></script>
+    <script src="login.js"></script>
+    <script src="auth.js"></script>
+    <script src="auth_login.js"></script>
+  </head>
+  <body onload="accessPage()">
+    <div class="background-animation"></div>
+    <svg
+      class="log-joinlogo"
+      width="101"
+      height="122"
+      viewBox="0 0 101 122"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M71.6725 0H49.5146V25.4923H71.6725V0Z" fill="#2A3647" />
+      <path
+        d="M49.5142 46.2251H71.6721V82.1779C71.7733 90.8292 69.3112 99.3153 64.5986 106.557C59.9455 113.594 50.963 121.966 34.3446 121.966C16.2434 121.966 5.69286 113.406 0 108.715L13.9765 91.4743C19.533 96.0112 24.885 99.7435 34.4299 99.7435C41.6567 99.7435 44.5372 96.7988 46.2247 94.2307C48.5186 90.6637 49.7052 86.4923 49.6335 82.2464L49.5142 46.2251Z"
+        fill="#2A3647"
+      />
+      <path
+        d="M38.2135 30.1318H16.0557V52.3884H38.2135V30.1318Z"
+        fill="#29ABE2"
+      />
+      <path
+        d="M83.2795 111.522C83.2795 116.265 80.8762 118.815 77.5184 118.815C74.1607 118.815 71.9619 115.785 71.9619 111.762C71.9619 107.739 74.2288 104.554 77.7059 104.554C81.183 104.554 83.2795 107.687 83.2795 111.522ZM74.5356 111.711C74.5356 114.57 75.6776 116.675 77.6377 116.675C79.5978 116.675 80.7057 114.45 80.7057 111.539C80.7057 108.988 79.6831 106.592 77.6377 106.592C75.5924 106.592 74.5356 108.903 74.5356 111.711Z"
+        fill="#2A3647"
+      />
+      <path
+        d="M87.6771 104.76V118.593H85.2227V104.76H87.6771Z"
+        fill="#2A3647"
+      />
+      <path
+        d="M90.3359 118.593V104.76H93.0631L95.9947 110.461C96.7494 111.952 97.4209 113.483 98.006 115.049C97.8526 113.337 97.7844 111.368 97.7844 109.177V104.76H100.034V118.593H97.4946L94.5289 112.772C93.7437 111.243 93.0438 109.671 92.4324 108.064C92.4324 109.776 92.5517 111.711 92.5517 114.09V118.576L90.3359 118.593Z"
+        fill="#2A3647"
+      />
+    </svg>
+    <div class="loginsitecontainers">
+      <div class="log-head">
+        <div class="log-head-elements">
+          <span>Not a Join user?</span>
+          <a href="./sign-up.html"
+            ><button class="button-primary">Sign Up</button></a
+          >
+        </div>
+      </div>
+      <div class="log-maincontainer">
+        <div class="login-container">
+          <div class="login-headline-container">
+            <h1>Log in</h1>
+            <div class="login-separator"></div>
+          </div>
+
+          <form
+            onsubmit="validateLogin(event)"
+            class="login-form"
+            id="login-form"
+          >
+            <div class="login-input-container">
+              <div class="login-input">
+                <label for="entermail" class="login-required" id="username"
+                  ><span id="login-email" style="display: none"
+                    >Please enter email</span
+                  ><span id="user-unknown" style="display: none"
+                    >Unknown User</span
+                  ></label
+                >
+                <input
+                  required
+                  oninvalid="event.preventDefault(); showInvalidLogin('login-email', 'entermail')"
+                  onfocus="removeInvalidLogin('username', 'entermail')"
+                  class="inputfield-basic-design log-mailinput"
+                  type="email"
+                  autocomplete="username"
+                  id="entermail"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="login-input">
+                <label for="enterpassword" id="login-pw" class="login-required"
+                  ><span id="missing-pw" style="display: none"
+                    >Please enter password</span
+                  ><span id="incorrect-pw" style="display: none"
+                    >Password incorrect</span
+                  ></label
+                >
+                <input
+                  required
+                  oninvalid="event.preventDefault(); showInvalidLogin('missing-pw', 'enterpassword')"
+                  onfocus="removeInvalidLogin('login-pw', 'enterpassword')"
+                  class="inputfield-basic-design log-pwinput"
+                  type="password"
+                  autocomplete="current-password"
+                  id="enterpassword"
+                  name="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="remember-container">
+                <input
+                  type="checkbox"
+                  id="remember"
+                  name="remember"
+                  class="custom-checkbox"
+                />
+                <label for="remember" class="custom-checkbox-login">
+                  <div class="checkbox-icon">
+                    <svg
+                      width="19"
+                      height="18"
+                      viewBox="0 0 19 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        class="unchecked"
+                        x="1.38818"
+                        y="1"
+                        width="16"
+                        height="16"
+                        rx="3"
+                        stroke="#2A3647"
+                        stroke-width="2"
+                      />
+                      <path
+                        class="checked"
+                        d="M17.3882 8V14C17.3882 15.6569 16.045 17 14.3882 17H4.38818C2.73133 17 1.38818 15.6569 1.38818 14V4C1.38818 2.34315 2.73133 1 4.38818 1H12.3882"
+                        stroke="#2A3647"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        class="checked"
+                        d="M5.38818 9L9.38818 13L17.3882 1.5"
+                        stroke="#2A3647"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  Remember me
+                </label>
+              </div>
+              <div class="login-buttons-container">
+                <button
+                  type="submit"
+                  class="button-primary action-button-text su-button"
+                >
+                  Log in</button
+                ><button
+                  onclick="loginAsGuest(event)"
+                  class="button-secondary action-button-text su-button"
+                >
+                  Guest Log in
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="log-footer">
+      <div class="log-siteinfo">
+        <a href="privacy_policy.html">Privacy Policy</a>
+        <a href="impressum.html">Legal notice</a>
+      </div>
+    </div>
+  </body>
+</html>
