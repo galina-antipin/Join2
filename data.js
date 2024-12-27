@@ -11,7 +11,7 @@ const defaultTask = {
 };
 
 const FIREBASE_URL =
-  "https://newjoin-8020d-default-rtdb.europe-west1.firebasedatabase.app/";
+  "https://join-55267-default-rtdb.europe-west1.firebasedatabase.app/";
 
 let users = [];
 let activeUser = undefined;
